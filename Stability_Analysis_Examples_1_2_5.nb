@@ -15,7 +15,7 @@ Cell[BoxData[
 Cell[TextData[{
  StyleBox["README:",
   FontWeight->"Bold"],
- "\nThis Notebook contains the calculations performed in Appendix C \
+ "\nThis Notebook contains the calculations performed in Appendix C of \
 arXiv:2605.16168.\n\nIn that article, we find solutions to consistent \
 truncations of supergravity where some real scalars are analytically extended \
 to imaginary values, ensuring the metric remains real-valued. Among the \
@@ -42,8 +42,9 @@ Carlos Hoyos, Daniele Musso"
 }], "Text",
  CellChangeTimes->{
   3.998535668083417*^9, {3.998535731175661*^9, 3.99853577566446*^9}, {
-   3.998536545278207*^9, 3.998536553861557*^9}, 
-   3.998536835580852*^9},ExpressionUUID->"d507a637-ac91-470c-b604-\
+   3.998536545278207*^9, 3.998536553861557*^9}, 3.998536835580852*^9, {
+   3.998537496805833*^9, 
+   3.998537497197109*^9}},ExpressionUUID->"d507a637-ac91-470c-b604-\
 7436c90bf79b"],
 
 Cell[TextData[{
