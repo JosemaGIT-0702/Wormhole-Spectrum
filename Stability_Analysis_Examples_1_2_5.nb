@@ -1,6 +1,9 @@
-(*** Wolfram Notebook File ***)
+(* Content-type: application/vnd.wolfram.mathematica *)
 
-(* CreatedBy='Wolfram 14.2' *)
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Wolfram 15.0' *)
 
 (* Beginning of Notebook Content *)
 Notebook[{
@@ -8,6 +11,40 @@ Cell[BoxData[
  RowBox[{"Quit", "[", "]"}]], "Input",
  CellChangeTimes->{{3.986431562027958*^9, 3.986431563954569*^9}},
  CellLabel->"In[41]:=",ExpressionUUID->"093eb5c2-d7aa-734e-938a-7e274eca08e1"],
+
+Cell[TextData[{
+ StyleBox["README:",
+  FontWeight->"Bold"],
+ "\nThis Notebook contains the calculations performed in Appendix C \
+arXiv:2605.16168.\n\nIn that article, we find solutions to consistent \
+truncations of supergravity where some real scalars are analytically extended \
+to imaginary values, ensuring the metric remains real-valued. Among the \
+solutions there are Lorentzian traversable wormholes connecting two \
+asymptotically Anti-de Sitter spacetimes and flows that have a real metric \
+also when uplifted to ten or eleven dimensions. We argue that the holographic \
+duals are pseudo-Hermitian and PT-symmetric theories. Wormhole solutions also \
+admit an interpretation as the low-energy theory of two stacks of branes and \
+antibranes after tachyon condensation. The wormhole is then dual to an \
+entangled state of two copies of the theory that lives on a stack of branes. \
+We present some evidence by computing the mutual information between the \
+theories at each boundary and by identifying the Goldstone bosons associated \
+to the breaking of the two copies of Poincar\[EAcute] symmetry to their \
+diagonal subgroup.\n\nEven though the solutions we construct satisfy a set of \
+BPS equations and can be seen as analytic extensions of supersymmetric \
+solutions, their stability is not guaranteed. In this Notebook we study the \
+perturbative stability of 3 examples of ghost scalars coupled to gravity, \
+listed in the section 2.2 of arXiv:2605.16168. \n\nIn the three cases that we \
+examine, we find no evidence of instability.\n\nThe methodology is briefly \
+explained at the start of each example and in much more detail in Appendix B \
+and C of arXiv:2605.16168.\n\nAuthors of the article: Jose M. Begines, Ant\
+\[OAcute]n F. Faedo, Carlos Hoyos, Daniele Musso\nDevelopers of the Notebook: \
+Carlos Hoyos, Daniele Musso"
+}], "Text",
+ CellChangeTimes->{
+  3.998535668083417*^9, {3.998535731175661*^9, 3.99853577566446*^9}, {
+   3.998536545278207*^9, 3.998536553861557*^9}, 
+   3.998536835580852*^9},ExpressionUUID->"d507a637-ac91-470c-b604-\
+7436c90bf79b"],
 
 Cell[TextData[{
  StyleBox["Notation:",
@@ -58,9 +95,35 @@ Cell[TextData[{
   3.9857868245576534`*^9}, {3.9864316656248093`*^9, 3.986431669617153*^9}, {
   3.986431820042404*^9, 3.9864318209528008`*^9}, {3.9864329704712143`*^9, 
   3.9864329781513805`*^9}, {3.986458253017193*^9, 3.9864582611208496`*^9}, {
-  3.986572006599554*^9, 
-  3.986572006799473*^9}},ExpressionUUID->"7e07631d-d8de-5148-87dc-\
+  3.986572006599554*^9, 3.986572006799473*^9}, {3.9985366109361134`*^9, 
+  3.998536614393983*^9}},ExpressionUUID->"7e07631d-d8de-5148-87dc-\
 190eed5e2357"],
+
+Cell[TextData[{
+ StyleBox["Methodology:",
+  FontWeight->"Bold"],
+ "\nWe employ a spectral method based on Chebyshev polynomials.\n\nWe first \
+compactify the radial domain introducing a coordinate \[Upsilon] \[Element] \
+[-1,1]. The resulting ODE has a singular point at \[Upsilon] = 0, which \
+requires us to split the problem into two subdomains, \[Upsilon] \[Element] \
+[-1,0] and \[Upsilon] \[Element] [0,1]. Since the two subproblems are \
+identical, we restrict our analysis to the negative-\[Upsilon] domain.\n\nWe \
+then analyze the asymptotic behavior of the solutions at the two endpoints, \
+\[Upsilon] = -1 and \[Upsilon] = 0. This allows us to explicitly factor out \
+the corresponding regular asymptotic behavior at each endpoint. We \
+subsequently introduce a new radial coordinate s \[Element] [-1,1], which \
+provides the standard domain for the Chebyshev expansion. \n\nThe radial \
+domain is discretized on a Gauss-Lobatto grid. This yields a convenient and \
+efficient construction of discretized radial first- and second-order \
+derivatives. Since the regular asymptotics have been factored out, no \
+additional boundary conditions need to be imposed. The spectrum is then \
+obtained by solving the resulting discretized generalized eigenvalue \
+problem."
+}], "Text",
+ CellChangeTimes->{{3.998535802085884*^9, 3.998535842105816*^9}, {
+  3.9985359459652357`*^9, 
+  3.998536098730426*^9}},ExpressionUUID->"54c6664f-7d99-494d-80d9-\
+da906af83dfb"],
 
 Cell[CellGroupData[{
 
@@ -1490,6 +1553,28 @@ Cell["d+1=4 Wormholes ABJM Coulomb branch (Example 2)", "Subchapter",
   3.986458277863806*^9, 3.9864582807094193`*^9}, {3.9865720088153534`*^9, 
   3.9865720089147205`*^9}},ExpressionUUID->"7c7bf0ea-e3b8-d94a-a5d6-\
 8f61fbe17f4f"],
+
+Cell[TextData[{
+ StyleBox["Methodology:",
+  FontWeight->"Bold"],
+ "\nThis example can be treated analytically.\n\nWe first compactify the \
+radial domain introducing a coordinate \[Upsilon] \[Element] [-1,1]. The \
+resulting ODE has a singular point at \[Upsilon] = 0, which requires us to \
+split the problem into two subdomains, \[Upsilon] \[Element] [-1,0] and \
+\[Upsilon] \[Element] [0,1]. Since the two subproblems are identical, we \
+restrict our analysis to the negative-\[Upsilon] domain.\n\nThe resulting ODE \
+can be solved analytically (not all versions of Mathematica are able to find \
+the analytical solution: we employed Mathematica 11, while more recent \
+versions, such as Mathematica 13 and 14, did not find an analytical \
+solution). \n\nThe spectrum is obtained by imposing regularity in the \
+interior and a vanishing source at the boundary (in the alternative \
+quantization)."
+}], "Text",
+ CellChangeTimes->{{3.998535802085884*^9, 3.998535842105816*^9}, {
+   3.9985359459652357`*^9, 3.998536098730426*^9}, {3.998536138374627*^9, 
+   3.998536240027849*^9}, 
+   3.998536812995895*^9},ExpressionUUID->"c6d7bb3f-83c7-4235-8df0-\
+6d6154130f60"],
 
 Cell[CellGroupData[{
 
@@ -3484,7 +3569,34 @@ Cell[TextData[{
 14f858b50d7a"],
 
 Cell[TextData[{
- "For ease of notation, the fields ",
+ StyleBox["Methodology:",
+  FontWeight->"Bold"],
+ "\nThis example involves two scalar fields and the coupled ODEs governing \
+their fluctuations.\n\nWe first compactify the radial domain introducing a \
+coordinate \[Upsilon] \[Element] [-1,1]. The resulting ODE system has a \
+singular point at \[Upsilon] = 0, which requires us to split the problem into \
+two subdomains, \[Upsilon] \[Element] [-1,0] and \[Upsilon] \[Element] [0,1]. \
+Since the two subproblems are identical, we restrict our analysis to the \
+negative-\[Upsilon] domain.\n\nWe then analyze the asymptotic behavior of the \
+solutions at the two endpoints, \[Upsilon] = -1 and \[Upsilon] =0. This \
+allows us to explicitly factor out the corresponding regular asymptotic \
+behavior at each endpoint. We subsequently introduce a new radial coordinate \
+s \[Element] [-1,1]. \n\nWe solve the coupled system numerically. \
+Specifically, we match two numerical solutions propagated, respectively, from \
+the two endpoints of the radial domain. We obtain the spectrum requiring the \
+determinant of the matching matrix, constructed from the numerical solutions \
+and their derivatives, to vanish at a specified point in the interior of the \
+integration domain. This determinant constitutes a generalization of the \
+Wronskian to the coupled system."
+}], "Text",
+ CellChangeTimes->{{3.998536408800581*^9, 
+  3.9985365204644623`*^9}},ExpressionUUID->"e96745a1-c483-454c-b8d8-\
+b3ffdf51b7cc"],
+
+Cell[TextData[{
+ StyleBox["Notation:",
+  FontWeight->"Bold"],
+ "\n- For ease of notation, the fields ",
  Cell[BoxData[
   FormBox[
    SuperscriptBox["\[Eta]", "1"], TraditionalForm]],ExpressionUUID->
@@ -3504,8 +3616,9 @@ Cell[TextData[{
   "f84e2a46-676b-0b4b-910f-b152c51ac07a"],
  ", respectively."
 }], "Text",
- CellChangeTimes->{{3.986461080516285*^9, 
-  3.9864611674664707`*^9}},ExpressionUUID->"b0993894-11c4-4549-9b9d-\
+ CellChangeTimes->{{3.986461080516285*^9, 3.9864611674664707`*^9}, {
+  3.998536326266245*^9, 
+  3.99853633487717*^9}},ExpressionUUID->"b0993894-11c4-4549-9b9d-\
 802a20f3c1a0"],
 
 Cell[CellGroupData[{
@@ -7510,9 +7623,10 @@ Cell[BoxData[
 }, Closed]]
 }, Open  ]]
 },
-WindowSize->{1141.2, 574.8},
-WindowMargins->{{0, Automatic}, {Automatic, 0}},
-FrontEndVersion->"14.2 para Microsoft Windows (64-bit) (March 14, 2025)",
+WindowSize->{1694, 1030},
+WindowMargins->{{8, Automatic}, {Automatic, 8}},
+Magnification:>1.5 Inherited,
+FrontEndVersion->"15.0 for Mac OS X ARM (64-bit) (July 2, 2026)",
 StyleDefinitions->"Default.nb",
 ExpressionUUID->"f515b059-beb5-f543-8382-5a5a5e42d213"
 ]
